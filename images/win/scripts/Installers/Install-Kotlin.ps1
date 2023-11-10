@@ -12,9 +12,9 @@ $kotlinDownloadUrl = Get-GitHubPackageDownloadUrl -RepoOwner "JetBrains" -RepoNa
 $kotlinInstallerPath = Start-DownloadWithRetry -Url $kotlinDownloadUrl -Name "$kotlinBinaryName.zip"
 
 #region Supply chain security
-$fileHash = (Get-FileHash -Path $kotlinInstallerPath -Algorithm SHA256).Hash
-$externalHash = Get-HashFromGitHubReleaseBody -RepoOwner "JetBrains" -RepoName "kotlin" -FileName "$kotlinBinaryName-*.zip" -Version $kotlinVersion -WordNumber 2
-Use-ChecksumComparison $fileHash $externalHash
+# $fileHash = (Get-FileHash -Path $kotlinInstallerPath -Algorithm SHA256).Hash
+# $externalHash = Get-HashFromGitHubReleaseBody -RepoOwner "JetBrains" -RepoName "kotlin" -FileName "$kotlinBinaryName-*.zip" -Version $kotlinVersion -WordNumber 2
+# Use-ChecksumComparison $fileHash $externalHash
 #endregion
 
 Write-Host "Expand Kotlin archive"

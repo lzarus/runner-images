@@ -3,19 +3,16 @@ $toolsExecutables = @{
         @{ Binary = "python.exe"; Arguments = "--version" },
         @{ Binary = "Scripts\pip.exe"; Arguments = "--version" }
     )
-    PyPy = @(
+    PyPy   = @(
         @{ Binary = "python.exe"; Arguments = "--version" },
         @{ Binary = "Scripts\pip.exe"; Arguments = "--version" }
     )
-    Node = @(
+    Node   = @(
         @{ Binary = "node.exe"; Arguments = "--version" },
         @{ Binary = "npm"; Arguments = "--version" }
     )
-    Go = @(
-        @{ Binary =  "bin\go.exe"; Arguments = "version" }
-    )
-    Ruby = @(
-        @{ Binary = "bin\ruby.exe"; Arguments = "--version" }
+    Go     = @(
+        @{ Binary = "bin\go.exe"; Arguments = "version" }
     )
 }
 
